@@ -1,3 +1,6 @@
+import Alpine from 'alpinejs';
+import Focus from '@alpinejs/focus';
+
 import hljs from 'highlight.js/lib/core';
 import php from 'highlight.js/lib/languages/php';
 import shell from 'highlight.js/lib/languages/shell';
@@ -5,13 +8,17 @@ import bash from 'highlight.js/lib/languages/bash';
 import json from 'highlight.js/lib/languages/json';
 import diff from 'highlight.js/lib/languages/diff';
 
-import 'alpinejs';
 import { listen } from "quicklink";
 import docsearch from '@docsearch/js';
 
 import './clipboard';
 import './nav';
 import './darkmode';
+
+window.Alpine = Alpine;
+
+Alpine.plugin(Focus);
+Alpine.start();
 
 // Configure Highlight.js
 hljs.registerLanguage('php', php);

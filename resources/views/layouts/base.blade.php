@@ -29,10 +29,7 @@
 
     {{ $head ?? '' }}
 
-    <link rel="preload" href="{{ mix('css/app.css') }}" as="style">
-    <link rel="preload" href="{{ mix('js/app.js') }}" as="script">
-
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     @stack('styles')
 </head>
@@ -62,8 +59,6 @@
 
 
 @stack('scripts')
-
-<script defer src="{{ mix('js/app.js') }}"></script>
 
 @if (app()->environment('production'))
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61404619-3"></script>
