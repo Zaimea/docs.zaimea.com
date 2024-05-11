@@ -25,7 +25,7 @@
                             class="w-full md:w-auto transition duration-200 bg-gray-300 hover:bg-gray-400 text-gray-600 dark:text-gray-600 hover:text-white dark:hover:text-white hover:no-underline font-semibold tracking-wider rounded-full py-3 px-6 mt-4 md:mt-0"
                             target="_blank"
                         >
-                            View on Github
+                            View on Github(only team member)
                         </a>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
                     <img src="{{ asset('assets/img/icon-stack.svg') }}" class="h-12 w-12" alt="stack icon">
 
                     <h3 id="intro-laravel" class="uppercase text-lg text-blue-900 dark:text-blue-300 font-bold mt-6 mb-3">
-                        Highly modular <br>Framework design
+                        TODO
                     </h3>
 
                     <p class="text-gray-600 dark:text-gray-300">
@@ -56,7 +56,7 @@
                          alt="terminal icon">
 
                     <h3 id="intro-markdown" class="uppercase text-lg text-blue-900 dark:text-blue-300 font-bold mt-6 mb-3">
-                        Write powerful<br>Console applications
+                        TODO
                     </h3>
 
                     <p class="text-gray-600 dark:text-gray-300">
@@ -68,13 +68,11 @@
                     <img src="{{ asset('assets/img/icon-window.svg') }}" class="h-12 w-12" alt="window icon">
 
                     <h3 id="intro-mix" class="uppercase text-lg text-blue-900 dark:text-blue-300 font-bold mt-6 mb-3">
-                        For Artisans<br>100% Open Source
+                        TODO
                     </h3>
 
                     <p class="text-gray-600 dark:text-gray-300">
-                        You’re free to dig through the source to see exactly how it works. See something that needs to
-                        be
-                        improved? Just send us a pull request on GitHub.
+                        TODO
                     </p>
                 </div>
             </div>
