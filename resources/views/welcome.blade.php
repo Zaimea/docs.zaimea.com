@@ -25,7 +25,7 @@
                             class="w-full md:w-auto transition duration-200 bg-gray-300 hover:bg-gray-400 text-gray-600 dark:text-gray-600 hover:text-white dark:hover:text-white hover:no-underline font-semibold tracking-wider rounded-full py-3 px-6 mt-4 md:mt-0"
                             target="_blank"
                         >
-                            View on Github(only team member)
+                            View on Github
                         </a>
                     </div>
                 </div>
