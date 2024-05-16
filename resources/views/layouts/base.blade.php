@@ -43,7 +43,7 @@
 
         {{ $footer ?? '' }}
 
-        <footer class="py-4 text-sm text-center text-gray-200 bg-gray-800" role="contentinfo">
+        <footer class="py-4 text-sm text-center text-gray-700 dark:text-gray-200 bg-gray-100 dark:bg-gray-800" role="contentinfo">
             <ul class="flex flex-col justify-center my-0 list-none md:flex-row">
                 <li class="md:mr-2">
                     &copy; {{ date('Y') }} Zaimea. All rights reserved.

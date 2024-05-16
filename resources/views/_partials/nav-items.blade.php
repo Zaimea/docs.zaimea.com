@@ -8,7 +8,11 @@
            target="_blank" rel="noopener">
             <x-i.twitter class="h-6 w-6"></x-i.twitter>
         </a>
-        <a href="{{ config('site.github') }}" target="_blank" rel="noopener"
+        <a title="@{{ config('site.instagram') }}" href="https://instagram.com/{{ config('site.instagram') }}"
+            target="_blank" rel="noopener">
+            <x-i.instagram class="h-6 w-6"></x-i.instagram>
+        </a>
+        <a title="@{{ config('site.github') }}" href="{{ config('site.github') }}" target="_blank" rel="noopener"
            class="text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-gray-400">
             <x-i.github class="h-6 w-6"></x-i.github>
         </a>
