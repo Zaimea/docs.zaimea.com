@@ -20,14 +20,16 @@
             a {
                 @apply font-system font-normal flex items-center px-3 py-1.5 text-sm leading-5 text-gray-500 dark:text-gray-400 rounded-md;
 
-                &:hover, &:focus {
-                    @apply bg-gray-300 no-underline dark:text-gray-800;
+                &:hover {
+                    @apply no-underline text-gray-600 dark:text-gray-400;
+                    transform: translate3d(5px, 0, 0);
                 }
             }
 
             .active {
                 a {
-                    @apply bg-gray-200 text-gray-700 font-semibold !important;
+                    @apply text-gray-600 dark:text-gray-400 bg-gray-200 dark:bg-gray-700 font-semibold !important;
+                    transform: translate3d(5px, 0, 0);
                 }
             }
 

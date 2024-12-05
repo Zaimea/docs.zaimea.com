@@ -5,9 +5,14 @@ if [ ! -f composer.json ]; then
     exit 1
 fi
 
-composer install
+composer install --optimize-autoloader --no-dev
 cp .env.example .env
 php artisan key:generate
+php artisan config:cache
+php artisan event:cache
+php artisan route:cache
+php artisan view:cache
+php artisan optimize
 source "$(dirname "$0")/checkout_latest_docs.sh"
 npm install
 npm run build

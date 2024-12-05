@@ -13,7 +13,8 @@
         "laravel/tinker": "^2.9",
         "league/commonmark": "^2.2",
         "spatie/yaml-front-matter": "^2.0",
-        "symfony/yaml": "^7.0"
+        "symfony/yaml": "^7.0",
+        "zaimealabs/blow": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",

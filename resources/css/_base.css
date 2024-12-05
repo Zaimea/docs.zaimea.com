@@ -1,4 +1,6 @@
 body {
+    @apply text-gray-200 dark:text-white;
+
     font-size: 17px;
     scroll-behavior: smooth;
 }
@@ -7,7 +9,7 @@ a {
     @apply font-medium no-underline text-blue-600 dark:text-blue-400 hover:underline;
 
     &:hover {
-        @apply text-blue-700;
+        @apply text-blue-700 dark:text-blue-500;
     }
 }
 
@@ -49,7 +51,7 @@ h6 {
 }
 
 hr {
-    @apply border-b border-blue-200 my-12 rounded-full;
+    @apply border-b border-blue-200  dark:border-blue-400 my-12 rounded-full;
 }
 
 li {
@@ -90,17 +92,17 @@ p {
 }
 
 .scrollbar::-webkit-scrollbar {
-    width: 7px;
+    width: 8px;
 }
 
 .scrollbar::-webkit-scrollbar-track {
-    @apply bg-gray-800;
+    @apply bg-gray-400 dark:bg-gray-600;
 }
 
 .scrollbar::-webkit-scrollbar-thumb {
-    @apply bg-gray-300;
+    @apply bg-gray-500 dark:bg-gray-300;
 }
 
 .scrollbar::-webkit-scrollbar-thumb:hover {
-    @apply bg-gray-500;
+    @apply bg-gray-600 dark:bg-gray-500;
 }

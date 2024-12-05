@@ -10,6 +10,7 @@ class AppLayout extends Component
     public string $layout;
 
     public ?string $title;
+
     public ?string $description;
 
     /**

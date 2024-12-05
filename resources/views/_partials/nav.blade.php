@@ -1,20 +1,24 @@
-<header class="flex items-center shadow-sm bg-white dark:bg-gray-900 py-4" role="banner">
-    <div class="container flex items-center mx-auto px-6 space-x-4 lg:space-x-0" >
+<header class="flex items-center shadow-white/25 dark:shadow-white/10 h-16 py-4 relative z-[100] backdrop-blur-md" role="banner">
+    <div class="max-w-5xl px-6 lg:px-1 xl:px-2 container flex items-center mx-auto space-x-3" >
         <div class="flex items-center lg:hidden">
             <button aria-label="Toggle Documentation Navigation" @click.prevent="toggle()"
                 class="text-gray-500 dark:text-gray-200 focus:text-gray-600 dark:focus:text-gray-400 focus:outline-none">
-                <x-i.menu class="h-6 w-6 fill-current md:h-8 md:w-8"></x-i.menu>
+                <x-i.menu class="md:size-8 size-6 text-gray-500 dark:text-white opacity-50"></x-i.menu>
             </button>
         </div>
 
-        <div class="flex items-center">
-            <a href="/" title="{{ config('app.name') }} home" class="inline-flex items-center">
+        <div class="flex items-center flex-none">
+            <a href="/" class="flex items-center justify-center">
                 <img class="h-8 dark:hidden flex" loading="lazy" src="{{ asset('assets/img/logo-dark.svg') }}" alt="{{ config('app.name') }} logo" />
                 <img class="h-8 hidden dark:flex" loading="lazy" src="{{ asset('assets/img/logo.svg') }}" alt="{{ config('app.name') }} logo" />
             </a>
         </div>
 
-        <div class="flex flex-1 justify-end items-center text-right">
+        <div class="flex items-center justify-end w-full pr-5">
+            <div id="docsearch"></div>
+        </div>
+
+        <div class="flex items-center justify-end space-x-1 text-right">
             <button x-data="ToggleDark()" x-cloak x-init="created()" title="Dark Mode" @click.prevent="toggle()"
                     class="ml-6 dark:text-white text-gray-700 focus:outline-none" :class="{'text-white': mode == 'dark'}">
                 <svg fill="none" stroke="currentColor" class="fill-current h-8 lg:h-6"
@@ -30,8 +34,6 @@
                     </path>
                 </svg>
             </button>
-
-            <div id="docsearch"></div>
 
             <div class="hidden lg:flex">
                 @include('_partials.nav-items')

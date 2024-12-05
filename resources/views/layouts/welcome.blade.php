@@ -1,15 +1,14 @@
-<x-app-layout layout="base">
+<x-app-layout layout="base"
+    class="bg-gray-200 dark:bg-gray-200 font-sans leading-normal text-gray-900 dark:text-gray-900">
+
     <x-slot name="head">
         {{ $head ?? '' }}
     </x-slot>
 
-    @include('_partials.welcome.nav')
-
-    <main class="flex-1">
-        {{ $slot }}
-    </main>
+    {{ $slot }}
 
     <x-slot name="footer">
         {{ $footer ?? '' }}
     </x-slot>
+
 </x-app-layout>

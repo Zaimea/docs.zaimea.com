@@ -2,16 +2,16 @@
 
 @import 'tailwindcss/components';
 
-@import "./_base.css";
-@import "./_code.css";
-@import "./_navigation.css";
-@import "./_documentation.css";
+@import 'tailwindcss/utilities';
 
 @import 'highlight.js/styles/a11y-light.css';
 
 @import '@docsearch/css/dist/style.css';
 
-@import 'tailwindcss/utilities';
+@import "./_base.css";
+@import "./_code.css";
+@import "./_navigation.css";
+@import "./_documentation.css";
 
 [x-cloak] {
     display: none !important;
