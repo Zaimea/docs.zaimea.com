@@ -10,12 +10,10 @@
         "ext-simplexml": "*",
         "erusev/parsedown-extra": "^0.8.1",
         "laravel/framework": "^11.0",
-        "laravel/pulse": "^1.2",
         "laravel/tinker": "^2.9",
         "league/commonmark": "^2.2",
         "spatie/yaml-front-matter": "^2.0",
-        "symfony/yaml": "^7.0",
-        "zaimealabs/pulse-analytics": "*"
+        "symfony/yaml": "^7.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
