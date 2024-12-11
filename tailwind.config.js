@@ -6,6 +6,12 @@ export default {
         'resources/views/**/*.blade.php',
         'resources/js/**/*.js',
     ],
+    safelist: [
+        'bg-red-600', 'bg-purple-600', 'bg-blue-600',
+        'mb-10', 'max-w-2xl', 'mx-auto', 'px-4', 'py-8', 'lg:flex', 'lg:items-center', 'callout',
+        'w-20', 'h-20', 'mb-6', 'flex', 'items-center', 'justify-center', 'shrink-0', 'lg:mb-0',
+        'opacity-75', 'mb-0', 'lg:ml-6'
+    ],
     darkMode: 'class', // or 'media' or 'class'
     theme: {
         extend: {

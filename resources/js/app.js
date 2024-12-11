@@ -15,6 +15,10 @@ import './clipboard';
 import './nav';
 import './darkmode';
 
+import.meta.glob([
+    '../images/**',
+  ]);
+
 window.Alpine = Alpine;
 
 Alpine.plugin(Focus);

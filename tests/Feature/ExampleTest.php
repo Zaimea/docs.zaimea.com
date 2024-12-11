@@ -14,9 +14,9 @@ class ExampleTest extends TestCase
         $response->assertStatus(200);
     }
 
-    public function test_has_installation_page(): void
+    public function test_has_usage_page(): void
     {
-        $response = $this->get('/docs/installation');
+        $response = $this->get('/docs/usage');
 
         $response->assertStatus(200);
     }
