@@ -11,7 +11,7 @@ import diff from 'highlight.js/lib/languages/diff';
 import { listen } from "quicklink";
 import docsearch from '@docsearch/js';
 
-import './clipboard';
+//import './clipboard';
 import './nav';
 import './darkmode';
 

@@ -2,6 +2,7 @@
 
 namespace App\Markdown;
 
+use Laravel\Unfenced\UnfencedExtension;
 use League\CommonMark\Environment\Environment;
 use League\CommonMark\Environment\EnvironmentInterface;
 use League\CommonMark\Event\DocumentParsedEvent;
@@ -33,6 +34,7 @@ class GithubFlavoredMarkdownConverter extends MarkdownConverter
         $environment->addExtension(new StrikethroughExtension());
         $environment->addExtension(new TableExtension());
         $environment->addExtension(new TaskListExtension());
+        $environment->addExtension(new UnfencedExtension());
         $environment->addExtension(new AttributesExtension());
         $environment->addExtension(new FrontMatterExtension());
 

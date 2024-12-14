@@ -17,7 +17,7 @@
                     <div
                         class="sm:flex-row sm:space-x-6 flex flex-col items-center mt-6 justify-center">
                         <a class="sm:w-auto w-full px-12 py-4 text-lg font-bold text-white hover:text-white bg-sky-500 hover:bg-sky-600 border rounded-lg hover:no-underline focus:outline-none"
-                            href="{{ route('docs', 'introduction') }}">
+                            href="{{ route('docs', 'usage') }}">
                             <span
                                 class="w-full md:w-auto transition duration-200 tracking-wider py-3 px-6">
                                 Get Started

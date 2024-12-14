@@ -8,11 +8,12 @@
         "php": "^8.2",
         "ext-json": "*",
         "ext-simplexml": "*",
+        "cable8mm/commonmark-unfenced": "^1.0",
         "laravel/framework": "^11.0",
         "laravel/tinker": "^2.9",
         "league/commonmark": "^2.2",
-        "symfony/yaml": "^7.2.0",
-        "symfony/dom-crawler": "^7.2"
+        "symfony/dom-crawler": "^7.2",
+        "symfony/yaml": "^7.2.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",

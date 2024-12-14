@@ -10,6 +10,6 @@ for v in "${DOCS_VERSIONS[@]}"; do
         (cd resources/docs/$v && git pull)
     else
         echo "Cloning $v..."
-        git clone --single-branch --branch "$v" https://github.com/zaimea/zaimea-docs "resources/docs/$v"
+        git clone --depth 1 --single-branch --branch "$v" https://github.com/zaimea/zaimea-docs "resources/docs/$v"
     fi;
 done
