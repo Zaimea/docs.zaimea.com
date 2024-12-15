@@ -69,7 +69,7 @@ window.AppOffCanvasMenu = () => {
 }
 
 // Activates current url in Docs Navigation
-var current = document.querySelector('.docs-nav ul a[href="' + window.location.pathname + '"]');
+var current = document.querySelector('.docs-sidebar ul a[href="' + window.location.pathname + '"]');
 
 if (current) {
     current.parentNode.classList.add('active');

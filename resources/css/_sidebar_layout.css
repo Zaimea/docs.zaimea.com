@@ -1,0 +1,37 @@
+.docs-sidebar {
+    ul {
+        @apply list-none;
+        h2 {
+            @apply px-3 mb-0 text-xs leading-4 font-bold text-gray-400 dark:text-gray-200 uppercase tracking-wider;
+        }
+
+        li {
+            @apply my-1;
+            & > :not(template) + :not(template) {
+                @apply mb-8 mt-3;
+            }
+
+            a {
+                @apply font-sans font-normal flex items-center px-3 py-1.5 text-sm leading-5 text-gray-500 dark:text-gray-400 rounded-md;
+
+                &:hover {
+                    @apply no-underline text-gray-600 dark:text-gray-400;
+                    transform: translate3d(5px, 0, 0);
+                }
+            }
+
+            .active {
+                a {
+                    @apply text-gray-600 dark:text-gray-400 underline font-semibold !important;
+                    transform: translate3d(5px, 0, 0);
+                }
+            }
+
+            li {
+                & > :not(template) + :not(template) {
+                    @apply mb-0 mt-0;
+                }
+            }
+        }
+    }
+}

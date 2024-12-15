@@ -14,11 +14,7 @@
             </a>
         </div>
 
-        <div class="flex items-center justify-end w-full pr-5">
-            <div id="docsearch"></div>
-        </div>
-
-        <div class="flex items-center justify-end space-x-1 text-right">
+        <div class="flex items-center justify-end space-x-1 w-full text-right">
             <button x-data="ToggleDark()" x-cloak x-init="created()" title="Dark Mode" @click.prevent="toggle()"
                     class="ml-6 dark:text-white text-gray-700 focus:outline-none" :class="{'text-white': mode == 'dark'}">
                 <svg fill="none" stroke="currentColor" class="fill-current h-8 lg:h-6"

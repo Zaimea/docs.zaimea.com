@@ -9,6 +9,7 @@
         "ext-json": "*",
         "ext-simplexml": "*",
         "cable8mm/commonmark-unfenced": "^1.0",
+        "custura/highlight": "dev-main",
         "laravel/framework": "^11.0",
         "laravel/tinker": "^2.9",
         "league/commonmark": "^2.2",

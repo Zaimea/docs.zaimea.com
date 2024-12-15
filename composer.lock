@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d937a165b3f30878b12186d995ea7f85",
+    "content-hash": "9007a1f7b1b2dc415717533ed8d3f227",
     "packages": [
         {
             "name": "brick/math",
@@ -177,6 +177,64 @@
                 }
             ],
             "time": "2024-02-09T16:56:22+00:00"
+        },
+        {
+            "name": "custura/highlight",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/custura/highlight.git",
+                "reference": "1c2244d064f70aae35dd871bf9dfb0a78ee50ea4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/custura/highlight/zipball/1c2244d064f70aae35dd871bf9dfb0a78ee50ea4",
+                "reference": "1c2244d064f70aae35dd871bf9dfb0a78ee50ea4",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.2|^8.3|^8.4"
+            },
+            "require-dev": {
+                "assertchris/ellison": "^1.0.2",
+                "friendsofphp/php-cs-fixer": "^3.21",
+                "league/commonmark": "^2.4",
+                "phpstan/phpstan": "^1.10.0",
+                "phpunit/phpunit": "^10.0",
+                "symfony/var-dumper": "^6.4|^7.0"
+            },
+            "suggest": {
+                "assertchris/ellison": "Allows you to analyse sentence complexity",
+                "league/commonmark": "Adds markdown support"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Tempest\\Highlight\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Brent Roose",
+                    "email": "brendt@stitcher.io"
+                }
+            ],
+            "description": "Fast, extensible, server-side code highlighting",
+            "support": {
+                "source": "https://github.com/custura/highlight/tree/main"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/brendt",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-12-15T13:07:25+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -9853,7 +9911,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {},
+    "stability-flags": {
+        "custura/highlight": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

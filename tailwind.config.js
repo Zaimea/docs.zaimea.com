@@ -1,89 +1,109 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
+import defaultTheme from 'tailwindcss/defaultTheme';
+import colors from 'tailwindcss/colors';
+import forms from '@tailwindcss/forms';
 
-/** @type {import('tailwindcss').Config} */
+const accentColors = {
+    zaimea: '#6875f5',
+};
+
 export default {
-    content: [
-        'resources/views/**/*.blade.php',
-        'resources/js/**/*.js',
-    ],
-    safelist: [
-        'bg-red-600', 'bg-purple-600', 'bg-blue-600',
-        'mb-10', 'max-w-2xl', 'mx-auto', 'px-4', 'py-8', 'lg:flex', 'lg:items-center', 'callout',
-        'w-20', 'h-20', 'mb-6', 'flex', 'items-center', 'justify-center', 'shrink-0', 'lg:mb-0',
-        'opacity-75', 'mb-0', 'lg:ml-6'
-    ],
-    darkMode: 'class', // or 'media' or 'class'
-    theme: {
-        extend: {
-            height: {
-                'screen-24': 'calc(100vh - 4rem)'
-            },
-            fontFamily: {
-                sans: [
-                    'Nunito Sans', ...defaultTheme.fontFamily.sans
-                ],
-                system:[
-                    `system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",
-          Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji",
-          "Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"`
-                ],
-                mono: [
-                    'monospace',
-                ],
-            },
-            lineHeight: {
-                normal: '1.6',
-                loose: '1.75',
-            },
-            maxWidth: {
-                none: 'none',
-                '7xl': '80rem',
-                '8xl': '88rem'
-            },
-            spacing: {
-                '1.5': '0.375rem',
-                '7': '1.75rem',
-                '9': '2.25rem'
-            },
-            boxShadow: {
-                'lg': '0 -1px 27px 0 rgba(0, 0, 0, 0.04), 0 4px 15px 0 rgba(0, 0, 0, 0.08)',
-                'dome': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)'
-            },
-            inset:{
-                '16': '4rem',
-                'nav': '4.1rem',
-            },
-            fontSize: {
-                'xs': '.8rem',
-                'sm': '.925rem',
-                'base': '1rem',
-                'lg': '1.125rem',
-                'xl': '1.25rem',
-                '2xl': '1.5rem',
-                '3xl': '1.875rem',
-                '4xl': '2.125rem',
-                '5xl': '2.625rem',
-                '6xl': '4rem',
+  content: [
+      'app/Markdown/*.php',
+      'resources/views/**/*.blade.php',
+      'resources/js/**/*.js',
+  ],
+  darkMode: 'class',
+  theme: {
+    extend: {
+        fontSize: {
+          '6.5xl': ['4rem', { lineHeight: '1' }],
+        },
+        maxWidth: {
+            xxs: '16rem',
+        },
+        spacing: {
+            224: '56rem',
+        },
+        keyframes: {
+            cube: {
+                '50%': { transform: 'translateY(1rem)' },
             },
         },
+        animation: {
+            cube: 'cube 6s ease-in-out infinite',
+        }
     },
-    variants: {
-        borderRadius: ['responsive', 'focus'],
-        borderWidth: ['responsive', 'active', 'focus'],
-        width: ['responsive', 'focus'],
-        display: ['responsive', 'motion-safe', 'motion-reduce', 'dark'],
+    boxShadow: {
+        none: '0 0 0 0 rgba(0, 0, 0, 0)',
+        sm: `0 10px 15px -8px rgba(9, 9, 16, .1)`,
+        lg: '0 20px 30px -16px rgba(9, 9, 16, .2)',
+        xl: '0 10px 20px 0 rgba(9, 9, 16, .15)',
     },
-    plugins: [
-        function({ addUtilities }) {
-            const newUtilities = {
-                '.transition-fast': {
-                    transition: 'all .2s ease-out',
-                },
-                '.transition': {
-                    transition: 'all .5s ease-out',
-                },
-            }
-            addUtilities(newUtilities)
+    colors: {
+        ...{
+            transparent: 'transparent',
+            current: 'currentColor',
+            black: '#000',
+            white: '#fff',
+            gray: {
+                900: '#232323',
+                800: '#222222',
+                700: '#565454',
+                600: '#777777',
+                500: '#93939e',
+                400: '#B5B5BD',
+                300: '#d7d7dc',
+                200: '#e7e8f2',
+                100: '#f5f5fa',
+                50: '#fbfbfd',
+            },
+            dark: {
+                900: '#0C0D12',
+                800: '#12141C',
+                700: '#171923',
+                600: '#252A37',
+                500: '#394056',
+            },
+            red: {
+                900: '#981d15',
+                800: '#ca473f',
+                700: '#ec0e00',
+                600: '#EB4432',
+                500: '#F9322C',
+                400: '#f87171',
+                300: '#fca5a5',
+                200: '#fecaca',
+                100: '#fee2e2',
+            },
+            orange: {
+                600: '#f49d37',
+            },
+            blue: {
+                800: '#055472',
+                600: '#0782b1',
+                500: '#0AB2F5',
+            },
+            green: colors.green,
+            purple: {
+                600: '#8338ec',
+            },
         },
-    ],
+        ...accentColors,
+    },
+    fontFamily: {
+        sans: ['scandia-web', ...defaultTheme.fontFamily.sans],
+        mono: ['source-code-pro', ...defaultTheme.fontFamily.mono],
+    },
+  },
+
+  safelist: [
+    {
+        pattern: new RegExp(`bg-(${Object.keys(accentColors).join('|')})`),
+    }
+  ],
+  plugins: [
+    forms({
+        strategy: 'class',
+    })
+  ],
 }
